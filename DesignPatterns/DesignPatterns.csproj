@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{232CE8AA-FDB4-4203-B2B1-7281DBC7A689}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>DesignPatterns</RootNamespace>
+        <AssemblyName>DesignPatterns</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Adapter\Adapter.csproj">
+        <Project>{54b7a1c0-e82b-4051-ae20-b29fefcd08be}</Project>
+        <Name>Adapter</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Decorator\Decorator.csproj">
+        <Project>{235ff721-0736-43a8-9a88-5972fc38cb5a}</Project>
+        <Name>Decorator</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Facade\Facade.csproj">
+        <Project>{f5df0686-58fd-4d66-9e7f-3b8e3988ae29}</Project>
+        <Name>Facade</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj">
+        <Project>{4c34b1b9-f02c-45e9-9c32-08b027176a5b}</Project>
+        <Name>FactoryMethod</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Singleton\Singleton.csproj">
+        <Project>{34cbf87f-316f-4cf6-a31e-cfcffef8aea4}</Project>
+        <Name>Singleton</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\TemplateMethod\TemplateMethod.csproj">
+        <Project>{71472d3b-be5e-4ed9-b897-5e8316650e78}</Project>
+        <Name>TemplateMethod</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
